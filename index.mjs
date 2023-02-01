@@ -209,6 +209,7 @@ const constructor = ((options) => {
 /** @type {import('.').Ipp5AdlibitumServer.Companion} */
 const companion = ({});
 
+/** @type {import('.').Ipp5AdlibitumServer.ConstructorWithCompanion} */
 const constructorWithCompanion = Object.assign(constructor, companion);
 
 export { constructorWithCompanion as Ipp5AdlibitumServer };
