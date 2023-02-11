@@ -5,8 +5,8 @@ npm install e53e04ac/ipp5-adlibitum-server
 ~~~~~
 
 ~~~~~ mjs
-import { type Ipp5AdlibitumServer } from 'e53e04ac/ipp5-adlibitum-server';
-import { const Ipp5AdlibitumServer } from 'e53e04ac/ipp5-adlibitum-server';
+import { Ipp5AdlibitumServer } from 'e53e04ac/ipp5-adlibitum-server';
+import { Ipp5AdlibitumServer } from 'e53e04ac/ipp5-adlibitum-server';
 ~~~~~
 
 ~~~~~ mermaid
@@ -32,9 +32,9 @@ graph RL;
   A ----> B_5;
   A ----> B_6;
   A ----> B_7;
-  click B_0 "https://github.com/e53e04ac/event-emitter/tree/16e99ba8e6c11d40465eacae307459cc95a57625";
+  click B_0 "https://github.com/e53e04ac/event-emitter/tree/684f3b21090807e48917ae6591611f4eb2b1e661";
   click B_1 "https://www.npmjs.org/package/express/v/4.18.2";
-  click B_2 "https://github.com/e53e04ac/hold/tree/8fc3f6696d1c7ed6d184d90c5e33298cc9228991";
+  click B_2 "https://github.com/e53e04ac/hold/tree/67e5b60f9bb3221f8b200107c13e89a604a93631";
   click B_3 "https://www.npmjs.org/package/joi/v/17.7.1";
   click B_4 "https://www.npmjs.org/package/jsonwebtoken/v/9.0.0";
   click B_5 "https://www.npmjs.org/package/@types/express/v/4.17.17";
@@ -82,8 +82,8 @@ graph RL;
 ~~~~~ mermaid
 graph RL;
   subgraph "e53e04ac/ipp5-adlibitum-server";
-    E_0(["type Ipp5AdlibitumServer"]);
-    E_1(["const Ipp5AdlibitumServer"]);
+    E_0(["Ipp5AdlibitumServer"]);
+    E_1(["Ipp5AdlibitumServer"]);
   end;
   M(["index.d.ts"])
   subgraph "express";
