@@ -10,7 +10,7 @@ import { Ipp5AdlibitumServer } from 'e53e04ac/ipp5-adlibitum-server';
 
 ~~~~~ mermaid
 graph RL;
-  A(["e53e04ac/ipp5-adlibitum-server"]);
+  A(["package.json"]);
   subgraph "dependencies";
     B_0(["e53e04ac/event-emitter"]);
     B_1(["express"]);
@@ -23,17 +23,17 @@ graph RL;
     B_6(["@types/jsonwebtoken"]);
     B_7(["@types/node"]);
   end;
-  A --reference--> B_0;
-  A --reference--> B_1;
-  A --reference--> B_2;
-  A --reference--> B_3;
-  A --reference--> B_4;
-  A --reference--> B_5;
-  A --reference--> B_6;
-  A --reference--> B_7;
-  click B_0 "https://github.com/e53e04ac/event-emitter/tree/289e6320381f1be4d43177944eca0a12b665c4f7";
+  A ----> B_0;
+  A ----> B_1;
+  A ----> B_2;
+  A ----> B_3;
+  A ----> B_4;
+  A ----> B_5;
+  A ----> B_6;
+  A ----> B_7;
+  click B_0 "https://github.com/e53e04ac/event-emitter/tree/0c338d821268a5f0aaa42481216fd2e73c8734c9";
   click B_1 "https://www.npmjs.org/package/express/v/4.18.2";
-  click B_2 "https://github.com/e53e04ac/hold/tree/2143f5f52192ae4156ea0af80d41c87c55355e9c";
+  click B_2 "https://github.com/e53e04ac/hold/tree/285d028e225a7e75747417c3ed6b1ca0d5f52f6a";
   click B_3 "https://www.npmjs.org/package/joi/v/17.7.1";
   click B_4 "https://www.npmjs.org/package/jsonwebtoken/v/9.0.0";
   click B_5 "https://www.npmjs.org/package/@types/express/v/4.17.17";
@@ -43,45 +43,58 @@ graph RL;
 
 ~~~~~ mermaid
 graph LR;
-  subgraph "e53e04ac/ipp5-adlibitum-server"
-    C0("index.mjs");
-    C1("index.d.ts");
+  A(["index.mjs"])
+  subgraph "node:crypto";
+    B_0_0(["createHash"]);
   end;
-  subgraph "node:crypto"
-    D0(["createHash"]);
+  subgraph "express";
+    B_1_0(["raw"]);
+    B_1_1(["Router"]);
   end;
-  subgraph "express"
-    D1(["raw"]);
-    D2(["Router"]);
-    D8(["RequestHandler"]);
+  subgraph "joi";
+    B_2_0(["default"]);
   end;
-  subgraph "joi"
-    D3(["default"]);
+  subgraph "jsonwebtoken";
+    B_3_0(["default"]);
   end;
-  subgraph "jsonwebtoken"
-    D4(["default"]);
+  subgraph "event-emitter";
+    B_4_0(["EventEmitter"]);
   end;
-  subgraph "event-emitter"
-    D5(["EventEmitter"]);
+  subgraph "hold";
+    B_5_0(["hold"]);
+    B_5_1(["unwrap"]);
   end;
-  subgraph "hold"
-    D6(["hold"]);
-    D7(["unwrap"]);
-    D9(["Get"]);
-    D10(["ValueOrGet"]);
+  B_0_0 ----> A;
+  B_1_0 ----> A;
+  B_1_1 ----> A;
+  B_2_0 ----> A;
+  B_3_0 ----> A;
+  B_4_0 ----> A;
+  B_5_0 ----> A;
+  B_5_1 ----> A;
+~~~~~
+
+~~~~~ mermaid
+graph LR;
+  A(["index.d.ts"])
+  subgraph "express";
+    B_0_0(["Router"]);
+    B_0_1(["RequestHandler"]);
   end;
-  D0 --import--> C0;
-  D1 --import--> C0;
-  D2 --import--> C0;
-  D3 --import--> C0;
-  D4 --import--> C0;
-  D5 --import--> C0;
-  D6 --import--> C0;
-  D7 --import--> C0;
-  D2 --import--> C1;
-  D8 --import--> C1;
-  D3 --import--> C1;
-  D5 --import--> C1;
-  D9 --import--> C1;
-  D10 --import--> C1;
+  subgraph "joi";
+    B_1_0(["default"]);
+  end;
+  subgraph "event-emitter";
+    B_2_0(["EventEmitter"]);
+  end;
+  subgraph "hold";
+    B_3_0(["Get"]);
+    B_3_1(["ValueOrGet"]);
+  end;
+  B_0_0 ----> A;
+  B_0_1 ----> A;
+  B_1_0 ----> A;
+  B_2_0 ----> A;
+  B_3_0 ----> A;
+  B_3_1 ----> A;
 ~~~~~
