@@ -14,21 +14,6 @@ import { ValueOrGet } from 'hold';
 
 export declare namespace Ipp5AdlibitumServer {
 
-    type EventSpecs = Record<never, never>;
-
-    type Options = {
-        readonly clientUrn: ValueOrGet<string>;
-        readonly serverUrn: ValueOrGet<string>;
-        readonly clientPublicKey: ValueOrGet<string>;
-        readonly httpRequestBodyMaxSize: ValueOrGet<number>;
-        readonly eval: {
-            (f: string): Promise<unknown>;
-        };
-        readonly u: {
-            (): Promise<unknown>;
-        };
-    };
-
     type CredentialParams = {
         readonly token: string;
     };
@@ -57,6 +42,21 @@ export declare namespace Ipp5AdlibitumServer {
         T extends Record<string, unknown>,
         Body
     > = ExpressRequestHandler<unknown, unknown, Body, unknown, Record<string, unknown> & T>;
+
+    type Options = {
+        readonly clientUrn: ValueOrGet<string>;
+        readonly serverUrn: ValueOrGet<string>;
+        readonly clientPublicKey: ValueOrGet<string>;
+        readonly httpRequestBodyMaxSize: ValueOrGet<number>;
+        readonly eval: {
+            (f: string): Promise<unknown>;
+        };
+        readonly u: {
+            (): Promise<unknown>;
+        };
+    };
+
+    type EventSpecs = Record<never, never>;
 
     type _Self = {
         readonly options: Get<Options>;
