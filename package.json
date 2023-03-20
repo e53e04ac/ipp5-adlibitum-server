@@ -27,7 +27,7 @@
     "event-emitter": "github:e53e04ac/event-emitter",
     "express": "^4.18.2",
     "hold": "github:e53e04ac/hold",
-    "joi": "^17.8.3",
+    "joi": "^17.9.0",
     "jsonwebtoken": "^9.0.0"
   },
   "devDependencies": {
